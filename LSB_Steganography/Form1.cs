@@ -16,5 +16,11 @@ namespace LSB_Steganography
             f1.ShowDialog();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Decrypt f2 = new Decrypt();
+            f2.ShowDialog();
+        }
     }
 }

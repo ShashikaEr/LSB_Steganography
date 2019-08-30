@@ -29,29 +29,31 @@
         private void InitializeComponent()
         {
             this.picBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.msgBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.sltImgbtn = new System.Windows.Forms.Button();
+            this.Encryptbtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // picBox1
             // 
+            this.picBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBox1.Location = new System.Drawing.Point(12, 12);
             this.picBox1.Name = "picBox1";
             this.picBox1.Size = new System.Drawing.Size(291, 325);
             this.picBox1.TabIndex = 0;
             this.picBox1.TabStop = false;
             // 
-            // textBox1
+            // msgBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(452, 107);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(249, 20);
-            this.textBox1.TabIndex = 1;
+            this.msgBox.Location = new System.Drawing.Point(452, 107);
+            this.msgBox.Multiline = true;
+            this.msgBox.Name = "msgBox";
+            this.msgBox.Size = new System.Drawing.Size(249, 20);
+            this.msgBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -61,15 +63,6 @@
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Enter the message";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(490, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(155, 40);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Encrypt";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -94,19 +87,40 @@
             this.sltImgbtn.UseVisualStyleBackColor = true;
             this.sltImgbtn.Click += new System.EventHandler(this.sltImgbtn_Click);
             // 
+            // Encryptbtn
+            // 
+            this.Encryptbtn.Location = new System.Drawing.Point(490, 181);
+            this.Encryptbtn.Name = "Encryptbtn";
+            this.Encryptbtn.Size = new System.Drawing.Size(104, 23);
+            this.Encryptbtn.TabIndex = 7;
+            this.Encryptbtn.Text = "Encrypt";
+            this.Encryptbtn.UseVisualStyleBackColor = true;
+            this.Encryptbtn.Click += new System.EventHandler(this.Encryptbtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(516, 147);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "label3";
+            // 
             // Encrypt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 412);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Encryptbtn);
             this.Controls.Add(this.sltImgbtn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.msgBox);
             this.Controls.Add(this.picBox1);
             this.Name = "Encrypt";
-            this.Text = "EncryptDecrypt";
+            this.Text = "Encrypt in a Image";
+            this.Load += new System.EventHandler(this.Encrypt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -116,10 +130,11 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox msgBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button sltImgbtn;
+        private System.Windows.Forms.Button Encryptbtn;
+        private System.Windows.Forms.Label label3;
     }
 }
