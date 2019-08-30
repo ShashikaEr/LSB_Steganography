@@ -12,15 +12,19 @@ namespace LSB_Steganography
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Encrypt f1 = new Encrypt();   
+            Encrypt f1 = new Encrypt();
+            this.Hide();
             f1.ShowDialog();
-            
+            this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Decrypt f2 = new Decrypt();
+            this.Hide();
             f2.ShowDialog();
+            this.Close();
         }
     }
 }

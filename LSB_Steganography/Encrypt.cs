@@ -43,16 +43,12 @@ namespace LSB_Steganography
 
 
 
-            if (msgBox.Text == "")
-            {
-                MessageBox.Show("Message Box is Empty");
-
-            }
-            else if (label2.Text == "Select an Image")
+            if (label2.Text == "Select an Image")
             {
                 MessageBox.Show("Select an Image");
 
             }
+           
             else if (msgSize > 255)
             {
 
@@ -106,6 +102,14 @@ namespace LSB_Steganography
         private void Encrypt_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 f4 = new Form1();
+            this.Hide();
+            f4.ShowDialog();
+            this.Close();
         }
     }
 }

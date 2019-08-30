@@ -35,9 +35,9 @@ namespace LSB_Steganography
         private void decryptbtn_Click(object sender, EventArgs e)
         {
 
-            if (label2.Text == "")
+            if (label2.Text == "Select an Image")
             {
-                MessageBox.Show("Please Select the Image to decode");
+                MessageBox.Show("Select the Image to Decrypt");
             }
             else
             {
@@ -76,6 +76,13 @@ namespace LSB_Steganography
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 f3 = new Form1();
+            this.Hide();
+            f3.ShowDialog();
+            this.Close();
 
+        }
     }
 }
